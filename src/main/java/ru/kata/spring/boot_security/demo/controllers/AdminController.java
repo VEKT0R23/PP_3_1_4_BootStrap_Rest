@@ -10,10 +10,4 @@ public class AdminController {
     public String getAdminPage() {
         return "admin";
     }
-
-    @GetMapping("/user")
-    public String getUserPage() {
-        return "user";
-    }
-
 }

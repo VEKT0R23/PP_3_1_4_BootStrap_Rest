@@ -44,12 +44,6 @@ public class AdminRestController {
         userService.deleteUserById(id);
         return new ResponseEntity<>(id, HttpStatus.NO_CONTENT);
     }
-
-
-    @GetMapping(value = "/user")
-    public ResponseEntity <User> getUserByUsername(Principal principal) {
-        return new ResponseEntity<>(userService.getUserByName(principal.getName()), HttpStatus.OK);
-    }
 }
 
 

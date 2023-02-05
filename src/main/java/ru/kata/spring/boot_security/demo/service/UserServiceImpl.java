@@ -31,16 +31,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public User getUserById(Long id) {
-        Optional<User> userGetById = userRepository.findById(id);
-        if (userGetById.isPresent()) {
-            return userGetById.get();
-        } else {
-            throw new UsernameNotFoundException(String.format("Юзер с id - '%s' не найден", id));
-        }
-    }
-
-    @Override
     public User getUserByName(String username) {
         return userRepository.findByUsername(username);
     }

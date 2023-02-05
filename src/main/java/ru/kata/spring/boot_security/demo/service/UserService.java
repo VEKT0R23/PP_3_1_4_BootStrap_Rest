@@ -9,8 +9,6 @@ public interface UserService extends UserDetailsService {
 
     List<User> getAllUsers();
 
-    User getUserById(Long id);
-
     User getUserByName(String username);
 
     void addUser(User user);
